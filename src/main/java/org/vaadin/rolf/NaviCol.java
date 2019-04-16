@@ -34,9 +34,9 @@ public class NaviCol extends VerticalLayout {
 
         Div scroller = new Div(links);
         scroller.addClassNames("link-wrapper", "scroller");
-        add(scroller);
         scroller.setSizeFull();
         setFlexGrow(1, scroller);
+        add(scroller);
 
         links.add(new RouterLink("Form View", FormView.class));
         links.add(new RouterLink("Wrapping Layout", WrapDemoView.class));
