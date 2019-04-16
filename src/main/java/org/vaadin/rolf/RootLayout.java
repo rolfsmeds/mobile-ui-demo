@@ -21,17 +21,17 @@ public class RootLayout extends HorizontalLayout implements RouterLayout {
         NaviCol naviCol = new NaviCol();
         add(naviCol);
 
-//        UI.getCurrent().addAfterNavigationListener(e->hideMenu());
-//
-//        Div scrim = new Div();
-//        scrim.addClassName("navicol-scrim");
-//        scrim.addClickListener(e->hideMenu());
-//        addComponentAsFirst(scrim);
+        UI.getCurrent().addAfterNavigationListener(e->hideMenu());
+
+        Div scrim = new Div();
+        scrim.addClassName("navicol-scrim");
+        scrim.addClickListener(e->hideMenu());
+        addComponentAsFirst(scrim);
 
     }
 
-//    private void hideMenu() {
-//        UI.getCurrent().getElement().setAttribute("show-menu", false);
-//    }
+    private void hideMenu() {
+        UI.getCurrent().getElement().setAttribute("show-menu", false);
+    }
 
 }

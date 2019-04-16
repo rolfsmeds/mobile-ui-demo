@@ -51,11 +51,11 @@ public class FormView extends VerticalLayout {
         viewFooter.add(btnSave, btnCancel);
         add(viewFooter);
 
-//        Button menubutton = new Button(VaadinIcon.MENU.create());
-//        menubutton.addClassName("menu-button");
-//        menubutton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE, ButtonVariant.LUMO_ICON);
-//        viewHeader.addComponentAsFirst(menubutton);
-//        menubutton.addClickListener(e->UI.getCurrent().getElement().setAttribute("show-menu", true));
+        Button menubutton = new Button(VaadinIcon.MENU.create());
+        menubutton.addClassName("menu-button");
+        menubutton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE, ButtonVariant.LUMO_ICON);
+        viewHeader.addComponentAsFirst(menubutton);
+        menubutton.addClickListener(e->UI.getCurrent().getElement().setAttribute("show-menu", true));
 
     }
 
@@ -70,11 +70,11 @@ public class FormView extends VerticalLayout {
         form.add(streetAddress);
         form.add(new TextField("City"), new TextField("Zipcode"), new ComboBox<>("Country"));
 
-//        form.setResponsiveSteps(
-//                new FormLayout.ResponsiveStep("0", 1),
-//                new FormLayout.ResponsiveStep("400px", 2),
-//                new FormLayout.ResponsiveStep("600px", 3)
-//        );
+        form.setResponsiveSteps(
+                new FormLayout.ResponsiveStep("0", 1),
+                new FormLayout.ResponsiveStep("400px", 2),
+                new FormLayout.ResponsiveStep("600px", 3)
+        );
 
         return form;
     }

@@ -1,71 +1,72 @@
 <custom-style>
     <style>
 
-        /*.root-layout {*/
-            /*position: fixed;*/
-            /*top: 0;*/
-            /*bottom: 0;*/
-            /*left: 0;*/
-            /*right: 0;*/
-        /*}*/
+        .root-layout {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
 
-        /*.scroller {*/
-            /*-webkit-overflow-scrolling: touch;*/
-        /*}*/
+        .scroller {
+            -webkit-overflow-scrolling: touch;
+        }
 
-        /*.menu-button {*/
-            /*display: none;*/
-        /*}*/
+        .menu-button {
+            display: none;
+        }
 
-        /*.wrapping-layout {*/
-            /*flex-wrap: wrap;*/
-        /*}*/
+        .wrapping-layout {
+            flex-wrap: wrap;
+        }
 
 
-        /*!* Small viewports *!*/
-        /*@media(max-width: 1024px) {*/
+        /* Small viewports */
+        @media(max-width: 1024px) {
 
-            /*.navicol {*/
-                /*position: absolute;*/
-                /*transform: translateX(-100%);*/
-                /*transition: transform 0.2s;*/
-            /*}*/
+            .navicol {
+                position: absolute;
+                transform: translateX(-100%);
+                transition: transform 0.2s;
+            }
 
-            /*.view-header .menu-button {*/
-                /*display: block;*/
-            /*}*/
+            .view-header .menu-button {
+                display: block;
+            }
 
-            /*.navicol-scrim {*/
-                /*position: absolute;*/
-                /*z-index: 1;*/
-                /*width: 0;*/
-                /*height: 0;*/
-                /*background: var(--lumo-shade-50pct);*/
-                /*opacity: 0;*/
-                /*transition: opacity 0.2s;*/
-            /*}*/
+            /* Move menu into viewport */
+            [show-menu] .navicol {
+                transform: translateX(0);
+            }
 
-            /*!* Move menu into viewport *!*/
-            /*body[show-menu] .navicol {*/
-                /*transform: translateX(0);*/
-            /*}*/
-            /*!* Show scrim *!*/
-            /*body[show-menu] .navicol-scrim {*/
-                /*opacity: 1;*/
-                /*width: 100vw;*/
-                /*height: 100vh;*/
-            /*}*/
+            .navicol-scrim {
+                position: absolute;
+                z-index: 1;
+                width: 0;
+                height: 0;
+                background: var(--lumo-shade-50pct);
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
 
-            /*.view-footer, .view-header {*/
-                /*padding: var(--lumo-space-s);*/
-            /*}*/
+            /* Show scrim */
+            [show-menu] .navicol-scrim {
+                opacity: 1;
+                width: 100vw;
+                height: 100vh;
+            }
 
-            /*.wrapping-layout {*/
-                /*flex-direction: column;*/
-                /*align-items: flex-start;*/
-            /*}*/
+            .view-footer {
+                padding: var(--lumo-space-s);
+            }
 
-        /*}*/
+            .wrapping-layout {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
 
 
     </style>
