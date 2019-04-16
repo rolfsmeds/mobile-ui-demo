@@ -62,12 +62,6 @@ public class FormView extends VerticalLayout {
     private FormLayout getForm() {
         FormLayout form = new FormLayout();
 
-        form.setResponsiveSteps(
-                new FormLayout.ResponsiveStep("0", 1),
-                new FormLayout.ResponsiveStep("400px", 2),
-                new FormLayout.ResponsiveStep("600px", 3)
-        );
-
         form.add(new TextField("First name"), new TextField("Last name"));
         form.add(new DatePicker("Date of birth"), new ComboBox<String>("Gender"){{setItems("Male", "Female", "Other");}});
         form.add(new EmailField("Email address"), new TextField("Phone number"));
@@ -75,6 +69,12 @@ public class FormView extends VerticalLayout {
         streetAddress.getElement().setAttribute("colspan", "3");
         form.add(streetAddress);
         form.add(new TextField("City"), new TextField("Zipcode"), new ComboBox<>("Country"));
+
+//        form.setResponsiveSteps(
+//                new FormLayout.ResponsiveStep("0", 1),
+//                new FormLayout.ResponsiveStep("400px", 2),
+//                new FormLayout.ResponsiveStep("600px", 3)
+//        );
 
         return form;
     }
